@@ -39,9 +39,9 @@ window.addEventListener("load", function () {
   navLinks.classList.add("nav-links");
   navLinks.innerHTML = `
     <div class="close-button">&times;</div>
-    <li><a href="#home">Home</a></li>
+    <li><a href="https://www.thenicoleorbe.com/">Home</a></li>
     <li><a href="https://www.thenicoleorbe.com/certificates">Certifications</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="https://www.thenicoleorbe.com/my-work">Projects</a></li>
     <li><a href="https://www.shecodes.io/graduates/80721-nicole-orbe" target="_blank"">About</a></li>
   `;
 
