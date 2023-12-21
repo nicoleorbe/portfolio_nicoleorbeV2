@@ -1,0 +1,510 @@
+:root {
+  --green: #00c7c9;
+  --yellow: #fcea42;
+  --lt-pink: #ffece9;
+  --pink: #ffa8a6;
+  --lt-green: #c5fbe7;
+  --button-hover-transiton: all 200ms ease-in-out;
+  --button-border-radius: 30px;
+  --box-shadow: 10px 10px 20px rgba(109, 108, 109, 0.3);
+}
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Livvic", sans-serif;
+  background-color: #f2f6f5;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px 6px;
+  border: none;
+  border-radius: var(--button-border-radius);
+  transition: var(--button-hover-transiton);
+  box-shadow: var(--box-shadow);
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+/* Styles for the navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+  color: #333;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+.container-nav {
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 80px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* hamburger */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--green);
+  margin: 2px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.close-button {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.navbar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 99;
+}
+
+/* profile grid on section 1 */
+.container {
+  display: grid;
+  margin: 20px 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px 20px;
+  grid-template-areas:
+    "meet-nicole meet-nicole certificates certificates"
+    "projects skills skills social";
+}
+
+.grid-item {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden; /* This ensures the border radius works as intended */
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item {
+  padding: 0 20px 10px;
+}
+
+.grid-item h2,
+.grid-item h3 {
+  margin: 0;
+}
+
+.grid-item h2 {
+  font-weight: 500;
+}
+
+.grid-item h3 {
+  color: var(--pink);
+  font-weight: 300;
+}
+
+.meet-nicole {
+  grid-area: meet-nicole;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.meet-nicole-image {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.meet-nicole img {
+  max-width: 100%;
+  height: 150px;
+}
+
+.meet-nicole-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.meet-nicole-text p {
+  margin: 0;
+}
+
+.certificates {
+  grid-area: certificates;
+}
+
+.certificates .top-row img {
+  height: 60px;
+}
+
+.certificates img {
+  transition: transform 0.3s ease-in-out;
+}
+.certificates img:hover {
+  transform: scale(2);
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.skills {
+  grid-area: skills;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.top-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.top-row img {
+  height: 36px;
+}
+
+.text-row {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+  color: #333;
+}
+
+.skills-tech-icons {
+  display: flex;
+  margin: 0 20px;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.social {
+  grid-area: social;
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.socials-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 36px;
+}
+
+.fa-arrow-right {
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.fa-arrow-right:hover {
+  color: var(--pink);
+}
+
+/* profile grid */
+
+/* certificate grid on certificates.html */
+.container-certificates {
+  display: grid;
+  margin: 20px 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px 20px;
+}
+
+.grid-item-certificates img {
+  max-width: 300px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* certificate grid on certificates.html */
+
+/* my work grid */
+.title {
+  text-align: center;
+  font-size: 36px;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cards {
+  margin: 0 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+.cards-header {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.card {
+  background: white;
+  margin: 0 0 30px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 8px;
+}
+
+.card-header {
+  padding: 0;
+  border: none;
+}
+.card-image {
+  max-width: 100%;
+  display: block;
+}
+
+.card-title h4 {
+  padding: 5px 20px 10px;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 auto;
+}
+
+.card-title p {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 6px 10px 3px;
+  vertical-align: middle;
+}
+
+.card-body {
+  padding: 10px 30px;
+}
+
+.card-footer {
+  border: none;
+  background-color: white;
+}
+
+.card button {
+  background: var(--pink);
+  font-weight: 800;
+  margin-bottom: 20px;
+  border: none;
+}
+.card button a {
+  color: white;
+}
+
+.card button:hover {
+  background: var(--green);
+}
+
+.card a {
+  font-weight: 800;
+}
+
+/* tech icons */
+
+ul {
+  margin-top: 20px;
+}
+
+.tools,
+.tools-mobile {
+  display: inline-block;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.tools li,
+.tools-mobile li {
+  display: inline-block;
+  padding-right: 20px;
+}
+.tech-icons {
+  font-size: 20px;
+}
+
+/* footer start */
+.site-info {
+  display: absolute;
+  margin: 10px;
+}
+
+.site-info a {
+  text-decoration: none;
+  color: var(--green);
+}
+.site-info a:hover {
+  color: var(--pink);
+}
+/* footer end */
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 20px 50px;
+  }
+  .socials-icon {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    display: grid;
+    margin: 20px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px 20px;
+    grid-template-areas:
+      "meet-nicole"
+      "skills"
+      "social"
+      "certificates"
+      "projects"
+      "blog";
+  }
+
+  .container-certificates {
+    display: grid;
+    margin: 20px 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-cards {
+    margin: 0 40px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    text-align: center;
+    z-index: 1;
+    transform: translateX(-100%); /* Initially push the menu off-screen */
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links {
+    padding-top: 50px;
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    font-size: 30px;
+  }
+
+  .nav-links a {
+    color: white;
+  }
+  .nav-links a:hover {
+    font-weight: 600;
+  }
+
+  /* Show the close button only when the menu is active */
+  .close-button {
+    display: block;
+  }
+
+  .meet-nicole-image {
+    padding-top: 20px;
+  }
+
+  .text-row {
+    justify-content: center;
+  }
+
+  .container-certificates {
+    display: grid;
+    margin: 20px 100px;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 530px) {
+  .meet-nicole {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .skills-tech-icons {
+    margin: 0 10px;
+  }
+}

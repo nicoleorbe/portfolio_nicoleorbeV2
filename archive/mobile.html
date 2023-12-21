@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Front-end Developer Portfolio and Niche Sites"
+    />
+    <meta name="author" content="Nicole Orbe" />
+
+    <!-- Page Title -->
+    <title>👩🏻‍💻Front-end Developer Portfolio | Niche Sites</title>
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta
+      property="og:title"
+      content="Front-end Developer Portfolio | Niche Sites"
+    />
+    <meta
+      property="og:description"
+      content="Explore my front-end development projects, coding challenges, and niche sites."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.thenicoleorbe.com/" />
+    <meta
+      property="og:image"
+      content="https://www.thenicoleorbe.com/images/og-image.jpg"
+    />
+
+    <!-- Twitter Meta Tags (for Twitter card integration) -->
+    <meta name="twitter:card" content="summary_image" />
+    <meta
+      name="twitter:title"
+      content="Front-end Developer Portfolio | Niche Sites"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore my front-end development projects, coding challenges, and niche sites."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.thenicoleorbe.com/images/twitter-card-image.jpg"
+    />
+    <!-- bootstrap -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- bootstrap -->
+    <!-- Canonical URL (if you have multiple URLs for the same content) -->
+    <link rel="canonical" href="https://www.thenicoleorbe.com/" />
+    <link rel="stylesheet" href="./source/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/783e3281ae.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon (replace 'favicon.ico' with your own favicon file) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="container-nav">
+        <img
+          src="images/nicole-logo.svg"
+          alt="Nicole Orbe Front-end Developer Portfolio and Niche Sites"
+          class="logo"
+        />
+        <!-- <a href="#" class="logo"></a> -->
+        <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-links">
+          <div class="close-button">&times;</div>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="meet-nicole">
+          <img src="/images/nicole-avatar.svg" alt="" />
+        </div>
+        <div class="certificates"></div>
+        <div class="projects"></div>
+        <div class="blog"></div>
+        <div class="skills"></div>
+        <div class="social">
+          <div class="socials">
+            <a
+              href="https://www.linkedin.com/in/nicolesaraceniorbe/"
+              target="_blank"
+              ><i class="fab fa-linkedin icon"></i
+            ></a>
+            <a href="https://www.instagram.com/thenicoleorbe" target="_blank"
+              ><i class="fab fa-instagram icon"></i
+            ></a>
+            <a
+              class="nav-link"
+              href="https://www.shecodes.io/graduates/80721-nicole-orbe"
+              target="_blank"
+              >SheCodes</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- <section class="projects" id="projects"></section> -->
+      <footer>
+        <div class="site-info">
+          &copy; 2023 Nicole Orbe. Design by
+          <span id="highlight-nicole">
+            <a
+              href="https://www.shecodes.io/graduates/80721-nicole-orbe"
+              target="_blank"
+              >Nicole Orbe</a
+            ></span
+          >
+          and is
+          <a
+            href="https://github.com/nicoleorbe/challenge_travel_destination"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a
+            href="https://legendary-stroopwafel-595512.netlify.app/"
+            target="_blank"
+          >
+            hosted on Netlify</a
+          >
+        </div>
+      </footer>
+    </section>
+    <script>
+      // const navbarBg = document.querySelector(".navbar");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const closeButton = document.querySelector(".close-button");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        closeButton.classList.toggle("active");
+      });
+
+      closeButton.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        closeButton.classList.remove("active");
+      });
+
+      // function updateNavbarBackground() {
+      //   if (window.scrollY > 100) {
+      //     navbarBg.style.backgroundColor = "#333";
+      //     navbar.style.borderBottom = "1px solid #ddd";
+      //   } else {
+      //     navbarBg.style.backgroundColor = "rgba(51, 51, 51, 0)";
+      //     navbar.style.borderBottom = "none";
+      //   }
+      // }
+
+      // window.addEventListener("scroll", updateNavbarBackground);
+
+      // // Call the function on page load to set the initial background color
+      // updateNavbarBackground();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+:root {
+  --green: #00c7c9;
+  --yellow: #fcea42;
+  --lt-pink: #ffece9;
+  --pink: #ffa8a6;
+  --lt-green: #c5fbe7;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  color: #333;
+  height: 100vh;
+  margin: 0px;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f2f6f5;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+/* Navbar styles */
+.navbar {
+  color: #333;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+.container-nav {
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 80px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+/* hamburger */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--green);
+  margin: 2px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.close-button {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.navbar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 99;
+}
+
+/* Hero section styles */
+.hero {
+  /* height: 100vh; */
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background-color: var(--green);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--pink);
+}
+
+.container {
+  margin: auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20% 20%;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "meet-nicole meet-nicole certificates projects"
+    "blog skills skills social";
+}
+
+.meet-nicole {
+  grid-area: meet-nicole;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.meet-nicole img {
+  width: 100%;
+  height: 100%;
+}
+
+.certificates {
+  grid-area: certificates;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.blog {
+  grid-area: blog;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.skills {
+  grid-area: skills;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.social {
+  grid-area: social;
+  background-color: white;
+  border-radius: 20px;
+}
+
+/* certification section */
+
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  width: 80%;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+
+.certifications-items {
+  grid-column: auto;
+}
+.certifications-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* footer start */
+.site-info {
+  display: absolute;
+  bottom: 10px;
+}
+
+.site-info a {
+  text-decoration: none;
+  color: var(--green);
+}
+.site-info a:hover {
+  color: var(--pink);
+}
+
+/* footer end */
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+    text-align: center;
+    z-index: 1;
+    transform: translateX(-100%); /* Initially push the menu off-screen */
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0); /* Slide the menu into view */
+  }
+  .nav-links {
+    padding-top: 50px;
+  }
+  .nav-links li {
+    margin: 1rem 0; /* Add margin to create spacing between links */
+    font-size: 24px;
+  }
+
+  /* Show the close button only when the menu is active */
+  .close-button {
+    display: block;
+  }
+
+  .hero {
+    padding-top: 50px; /* Added padding to push hero content below navigation bar */
+  }
+}
