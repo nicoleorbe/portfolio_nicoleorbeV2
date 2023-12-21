@@ -271,10 +271,14 @@ p {
 /* certificate grid on certificates.html */
 .container-certificates {
   display: grid;
-  margin: 20px 100px;
+  margin: 20px 40px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 20px 20px;
+}
+
+.grid-item-certificates {
+  margin: 0 auto;
 }
 
 .grid-item-certificates img {
@@ -409,6 +413,24 @@ ul {
   .socials-icon {
     margin: 0 5px;
   }
+
+  .card-body {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+.grid-cards {
+  margin: 0 40px;
+  grid-template-columns: 1fr;
+}
+
+.container-certificates {
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: 1fr 1fr;
+}
+
 }
 
 @media (max-width: 920px) {
@@ -427,11 +449,7 @@ ul {
       "blog";
   }
 
-  .container-certificates {
-    display: grid;
-    margin: 20px 100px;
-    grid-template-columns: 1fr 1fr;
-  }
+ 
 
   .grid-cards {
     margin: 0 40px;
@@ -493,7 +511,6 @@ ul {
 
   .container-certificates {
     display: grid;
-    margin: 20px 100px;
     grid-template-columns: 1fr;
   }
 }
