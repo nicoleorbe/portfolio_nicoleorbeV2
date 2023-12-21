@@ -411,7 +411,7 @@ ul {
     margin: 20px 50px;
   }
   .socials-icon {
-    margin: 0 5px;
+    margin: 0 auto;
   }
 
   .card-body {
@@ -431,6 +431,8 @@ ul {
   grid-template-columns: 1fr 1fr;
 }
 
+
+
 }
 
 @media (max-width: 920px) {
@@ -449,12 +451,15 @@ ul {
       "blog";
   }
 
- 
-
   .grid-cards {
     margin: 0 40px;
     grid-template-columns: 1fr;
   }
+
+  .socials-icon {
+    margin: 0 10px;
+  }
+
 }
 
 @media (max-width: 768px) {
